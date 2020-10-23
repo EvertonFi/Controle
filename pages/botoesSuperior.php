@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../assets/iconfonts/feather/feather.css">
 <div class="ml-auto pageheader-btn">
-    <a href="#" class="btn btn-primary btn-icon text-white mr-2">
+    <a href="venda.php" class="btn btn-primary btn-icon text-white mr-2">
         <span>
             <i class="fe fe-shopping-cart"></i>
         </span> Adicionar Venda

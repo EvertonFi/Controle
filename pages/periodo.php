@@ -20,7 +20,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
 
     <!-- TITLE -->
-    <title>Relatorio de Vendas</title>
+    <title>Relatório de Vendas</title>
 
     <!-- BOOTSTRAP CSS -->
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -59,10 +59,10 @@
                 <!-- PAGE-HEADER -->
                 <div class="page-header">
                     <div>
-                        <h1 class="page-title">Relatorio de Vendas</h1>
+                        <h1 class="page-title">Relatório de Vendas</h1>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item active">Relatorio de Vendas</li>
+                            <li class="breadcrumb-item active">Relatório de Vendas</li>
                         </ol>
                     </div>
                     <?php require 'botoesSuperior.php' ?>
@@ -72,7 +72,7 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="mb-0 card-title">Relatorio de Vendas</h3>
+                                <h3 class="mb-0 card-title">Relatório de Vendas</h3>
                             </div>
                             <form action="" method="get">
                                 <div class="card-body">
@@ -102,7 +102,7 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Histórico de Vendas no Periodo</h3>
+                                <h3 class="card-title">Histórico de Vendas no Período</h3>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
