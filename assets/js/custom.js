@@ -126,43 +126,6 @@
 	};
 	$(".rating-stars").ratingStars(ratingOptions);
 	
-	// ______________ mCustomScrollbar
-	$(".vscroll").mCustomScrollbar();
-	$(".sidebar-right1").mCustomScrollbar({
-		theme:"minimal",
-		autoHideScrollbar: true,
-		scrollbarPosition: "outside"
-	});
-	
-	$(".notifications-menu").mCustomScrollbar({
-		theme:"minimal",
-		autoHideScrollbar: true,
-		scrollbarPosition: "outside"
-	});
-	$(".message-menu").mCustomScrollbar({
-		theme:"minimal",
-		autoHideScrollbar: true,
-		scrollbarPosition: "outside"
-	});
-	$(".highlight").mCustomScrollbar({
-		theme:"minimal",
-		autoHideScrollbar: true,
-		scrollbarPosition: "outside"
-	});
-	$(".customer-scroll").mCustomScrollbar({
-		theme:"minimal",
-		autoHideScrollbar: true,
-		scrollbarPosition: "outside"
-	});
-	$(".imagescroll").mCustomScrollbar({
-		axis: "x",
-		theme: "dark-3",
-		advanced: {
-			autoExpandHorizontalScroll: true
-		}
-	});
-	
-	
 	// ______________Chart-circle
 	if ($('.chart-circle').length) {
 		$('.chart-circle').each(function() {

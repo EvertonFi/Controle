@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/iconfonts/feather/feather.css">
 <div class="ml-auto pageheader-btn">
     <a href="#" class="btn btn-primary btn-icon text-white mr-2">
         <span>

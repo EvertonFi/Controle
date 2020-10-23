@@ -31,14 +31,6 @@
     <!-- SIDE-MENU CSS -->
     <link href="../assets/css/sidemenu.css" rel="stylesheet">
 
-    <!--PERFECT SCROLL CSS-->
-    <link href="../assets/plugins/p-scroll/perfect-scrollbar.css" rel="stylesheet" />
-
-    <!-- CUSTOM SCROLL BAR CSS-->
-    <!-- <link href="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" /> -->
-    <!--- FONT-ICONS CSS -->
-    <link href="../assets/css/icons.css" rel="stylesheet" />
-
     <!-- SIDEBAR CSS -->
     <link href="../assets/plugins/sidebar/sidebar.css" rel="stylesheet">
 

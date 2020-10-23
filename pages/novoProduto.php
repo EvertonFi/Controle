@@ -27,21 +27,9 @@
 
     <!-- STYLE CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/css/skin-modes.css" rel="stylesheet" />
-    <link href="../assets/css/dark-style.css" rel="stylesheet" />
 
     <!-- SIDE-MENU CSS -->
     <link href="../assets/css/sidemenu.css" rel="stylesheet">
-
-    <!--PERFECT SCROLL CSS-->
-    <link href="../assets/plugins/p-scroll/perfect-scrollbar.css" rel="stylesheet" />
-
-    <!-- CUSTOM SCROLL BAR CSS-->
-    <link href="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
-
-    <!--- FONT-ICONS CSS -->
-    <link href="../assets/css/icons.css" rel="stylesheet" />
-
 
     <!-- INTERNAL  FILE UPLODE CSS -->
     <link href="../assets/plugins/fileuploads/css/fileupload.css" rel="stylesheet" type="text/css" />
@@ -49,29 +37,11 @@
     <!-- INTERNAL SELECT2 CSS -->
     <link href="../assets/plugins/select2/select2.min.css" rel="stylesheet" />
 
-    <!-- INTERNAL BOOTSTRAP-DATERANGEPICKER CSS -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-daterangepicker/daterangepicker.css">
-
-    <!-- INTERNAL  TIME PICKER CSS -->
-    <link href="../assets/plugins/time-picker/jquery.timepicker.css" rel="stylesheet" />
-
-    <!-- INTERNAL  DATE PICKER CSS-->
-    <link href="../assets/plugins/date-picker/spectrum.css" rel="stylesheet" />
-
-    <!-- INTERNAL  MULTI SELECT CSS -->
-    <link rel="stylesheet" href="../assets/plugins/multipleselect/multiple-select.css">
-
-    <!-- INTERNAL TELEPHONE CSS-->
-    <link rel="stylesheet" href="../assets/plugins/telephoneinput/telephoneinput.css">
     <!-- SIDEBAR CSS -->
     <link href="../assets/plugins/sidebar/sidebar.css" rel="stylesheet">
 
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
-
-    <!-- Switcher CSS -->
-    <link href="../assets/switcher/css/switcher.css" rel="stylesheet">
-    <link href="../assets/switcher/demo.css" rel="stylesheet">
 </head>
 
 <body class="app sidebar-mini">
@@ -228,14 +198,6 @@
     <!-- SIDE-MENU JS-->
     <script src="../assets/plugins/sidemenu/sidemenu.js"></script>
 
-    <!-- PERFECT SCROLL BAR js-->
-    <script src="../assets/plugins/p-scroll/perfect-scrollbar.min.js"></script>
-    <script src="../assets/plugins/sidemenu/sidemenu-scroll.js"></script>
-
-    <!-- CUSTOM SCROLLBAR JS-->
-    <script src="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
-
-
     <!-- INTERNAL  FILE UPLOADES JS -->
     <script src="../assets/plugins/fileuploads/js/fileupload.js"></script>
     <script src="../assets/plugins/fileuploads/js/file-upload.js"></script>
@@ -243,37 +205,15 @@
     <!-- INTERNAL SELECT2 JS -->
     <script src="../assets/plugins/select2/select2.full.min.js"></script>
 
-    <!-- INTERNAL BOOTSTRAP-DATERANGEPICKER JS -->
-    <script src="../assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
-    <script src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-    <!-- INTERNAL  TIMEPICKER JS -->
-    <script src="../assets/plugins/time-picker/jquery.timepicker.js"></script>
-    <script src="../assets/plugins/time-picker/toggles.min.js"></script>
-
-    <!-- INTERNAL DATEPICKER JS-->
-    <script src="../assets/plugins/date-picker/spectrum.js"></script>
-    <script src="../assets/plugins/date-picker/jquery-ui.js"></script>
-    <script src="../assets/plugins/input-mask/jquery.maskedinput.js"></script>
-
-    <!-- INTERNAL MULTI SELECT JS -->
-    <script src="../assets/plugins/multipleselect/multiple-select.js"></script>
-    <script src="../assets/plugins/multipleselect/multi-select.js"></script>
-
     <!--INTERNAL  FORMELEMENTS JS -->
     <script src="../assets/js/form-elements.js"></script>
     <script src="../assets/js/select2.js"></script>
 
-    <!-- INTERNAL TELEPHONE JS -->
-    <script src="../assets/plugins/telephoneinput/telephoneinput.js"></script>
-    <script src="../assets/plugins/telephoneinput/inttelephoneinput.js"></script>
     <!-- SIDEBAR JS -->
     <script src="../assets/plugins/sidebar/sidebar.js"></script>
     <!-- CUSTOM JS -->
     <script src="../assets/js/custom.js"></script>
 
-    <!-- Swicther JS -->
-    <script src="../assets/switcher/js/switcher.js"></script>
 </body>
 
 

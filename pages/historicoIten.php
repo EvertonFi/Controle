@@ -27,24 +27,12 @@
 
     <!-- STYLE CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/css/skin-modes.css" rel="stylesheet" />
-    <link href="../assets/css/dark-style.css" rel="stylesheet" />
 
     <!-- SIDE-MENU CSS -->
     <link href="../assets/css/sidemenu.css" rel="stylesheet">
-    <!-- CUSTOM SCROLL BAR CSS-->
-    <link href="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
-
-    <!--- FONT-ICONS CSS -->
-    <link href="../assets/css/icons.css" rel="stylesheet" />
-
-
-    <!-- INTERNAL SELECT2 CSS -->
-    <link href="../assets/plugins/select2/select2.min.css" rel="stylesheet" />
 
     <!-- INTERNAL  DATA TABLE CSS-->
     <link href="../assets/plugins/datatable/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../assets/plugins/datatable/responsivebootstrap4.min.css" rel="stylesheet" />
     <link href="../assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css" rel="stylesheet" />
     <!-- SIDEBAR CSS -->
     <link href="../assets/plugins/sidebar/sidebar.css" rel="stylesheet">
@@ -52,9 +40,6 @@
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
 
-    <!-- Switcher CSS -->
-    <link href="../assets/switcher/css/switcher.css" rel="stylesheet">
-    <link href="../assets/switcher/demo.css" rel="stylesheet">
 </head>
 
 <body class="app sidebar-mini">
@@ -155,10 +140,6 @@
     <!-- SIDE-MENU JS-->
     <script src="../assets/plugins/sidemenu/sidemenu.js"></script>
 
-    <!-- PERFECT SCROLL BAR js-->
-    <script src="../assets/plugins/p-scroll/perfect-scrollbar.min.js"></script>
-    <script src="../assets/plugins/sidemenu/sidemenu-scroll.js"></script>
-
     <!-- CUSTOM SCROLLBAR JS-->
     <script src="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
 
@@ -173,9 +154,6 @@
     <script src="../assets/plugins/sidebar/sidebar.js"></script>
     <!-- CUSTOM JS -->
     <script src="../assets/js/custom.js"></script>
-
-    <!-- Swicther JS -->
-    <script src="../assets/switcher/js/switcher.js"></script>
 
     <!-- INTERNAL  DATA TABLE JS-->
     <script src="../assets/plugins/datatable/jquery.dataTables.min.js"></script>

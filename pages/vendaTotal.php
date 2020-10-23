@@ -27,43 +27,19 @@
 
     <!-- STYLE CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/css/skin-modes.css" rel="stylesheet" />
-    <link href="../assets/css/dark-style.css" rel="stylesheet" />
-
-    <!-- INTERNAL BOOTSTRAP-DATERANGEPICKER CSS -->
-    <link rel="stylesheet" href="../assets/plugins/bootstrap-daterangepicker/daterangepicker.css">
-
-    <!-- INTERNAL  TIME PICKER CSS -->
-    <link href="../assets/plugins/time-picker/jquery.timepicker.css" rel="stylesheet" />
-
-    <!-- INTERNAL  DATE PICKER CSS-->
-    <link href="../assets/plugins/date-picker/spectrum.css" rel="stylesheet" />
 
     <!-- SIDE-MENU CSS -->
     <link href="../assets/css/sidemenu.css" rel="stylesheet">
-    <!-- CUSTOM SCROLL BAR CSS-->
-    <link href="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
-
-    <!--- FONT-ICONS CSS -->
-    <link href="../assets/css/icons.css" rel="stylesheet" />
-
-
-    <!-- INTERNAL SELECT2 CSS -->
-    <link href="../assets/plugins/select2/select2.min.css" rel="stylesheet" />
 
     <!-- INTERNAL  DATA TABLE CSS-->
     <link href="../assets/plugins/datatable/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../assets/plugins/datatable/responsivebootstrap4.min.css" rel="stylesheet" />
     <link href="../assets/plugins/datatable/fileexport/buttons.bootstrap4.min.css" rel="stylesheet" />
     <!-- SIDEBAR CSS -->
     <link href="../assets/plugins/sidebar/sidebar.css" rel="stylesheet">
-
+    
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
 
-    <!-- Switcher CSS -->
-    <link href="../assets/switcher/css/switcher.css" rel="stylesheet">
-    <link href="../assets/switcher/demo.css" rel="stylesheet">
 </head>
 
 <body class="app sidebar-mini">
@@ -155,13 +131,6 @@
     <!-- INPUT MASK JS-->
     <script src="../assets/plugins/input-mask/jquery.mask.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $("#data").mask('00/00/0000');
-            $("#data2").mask('00/00/0000');
-        });
-    </script>
-
     <!-- RATING STARJS -->
     <script src="../assets/plugins/rating/jquery.rating-stars.js"></script>
 
@@ -194,7 +163,6 @@
     <script src="../assets/plugins/datatable/fileexport/buttons.bootstrap4.min.js"></script>
     <script src="../assets/plugins/datatable/fileexport/jszip.min.js"></script>
     <script src="../assets/plugins/datatable/fileexport/pdfmake.min.js"></script>
-    <script src="../assets/plugins/datatable/fileexport/vfs_fonts.js"></script>
     <script src="../assets/plugins/datatable/fileexport/buttons.html5.min.js"></script>
     <script src="../assets/plugins/datatable/fileexport/buttons.print.min.js"></script>
     <script src="../assets/plugins/datatable/fileexport/buttons.colVis.min.js"></script>
