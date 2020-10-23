@@ -48,7 +48,7 @@ $(function(e) {
 	
 	// Datepicker
 	$('.fc-datepicker').datepicker({
-		showOtherMonths: true,
+		showOtherMonths: false,
 		selectOtherMonths: true
 	});
 	$('#datepickerNoOfMonths').datepicker({

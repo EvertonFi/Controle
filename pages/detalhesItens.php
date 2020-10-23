@@ -74,12 +74,12 @@
                 <!-- PAGE-HEADER END -->
                 <!-- ROW-1 OPEN -->
                 <div class="row">
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-6 col-md-12">
                         <div class="card productdesc">
                             <div class="card-body">
                                 <div class="productdec text-center">
                                     <div class="bg-light-gray p-6 text-center">
-                                        <img alt="Product" src="https://laravel.spruko.com/yoha/Sidemenu-Icon-Light/assets/images/pngs/6.png" class="border p-2">
+                                        <img alt="Product" src="" class="border p-2">
                                     </div>
                                 </div>
 
@@ -133,8 +133,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- COL-END -->
-                    <div class="col-lg-4 col-md-12">
+                    </div>
+                    <!-- COL-END -->
+                    <div class="col-lg-6 col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title"> Detalhes do Produto</div>
@@ -190,6 +191,7 @@
                                     </div>
                                     <a class="btn btn-primary " href="#">Aplicar Alterações</a>
                                     <a class="btn btn-success " href="historicoIten.php">Histórico Alterações</a>
+                                    <a class="btn btn-warning " data-toggle="modal" data-target="#addqtd" style="color: white">Add. Estoque</a>
                                 </div>
                             </form>
                         </div>
@@ -200,6 +202,37 @@
         </div>
     </div>
     <!-- CONTAINER END -->
+    <!-- MESSAGE MODAL -->
+    <div class="modal" id="addqtd" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addqtd">Adicionar Itens no Estoque</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="form-control-label">Qtd. de Itens:</label>
+                            <input type="number" name="qtd" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="form-control-label">Preço:</label>
+                            <input type="text" name="preco" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MESSAGE MODAL CLOSED -->
+
     <!-- FOOTER -->
     <?php require 'footer.php' ?>
     <!-- FOOTER END -->

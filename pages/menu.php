@@ -57,9 +57,8 @@
 							<span class="side-menu__label">Relatório</span><i class="angle fa fa-angle-right"></i>
 						</a>
 						<ul class="slide-menu">
-							<li><a href="chart-chartist.html" class="slide-item">Período</a></li>
-							<li><a href="chart-flot.html" class="slide-item"> Venda no Mês</a></li>
-							<li><a href="chart-echart.html" class="slide-item"> Venda Total</a></li>
+							<li><a href="periodo.php" class="slide-item">Período</a></li>
+							<li><a href="vendaTotal.php" class="slide-item"> Venda Total</a></li>
 						</ul>
 					</li>
 					<li class="slide">
@@ -74,8 +73,7 @@
 							<span class="side-menu__label">E-Commerce</span><i class="angle fa fa-angle-right"></i>
 						</a>
 						<ul class="slide-menu">
-							<li><a href="shop.html" class="slide-item"> Realizar Venda</a></li>
-							<li><a href="shop-description.html" class="slide-item"> Realizar Orçamento</a></li>
+							<li><a href="venda.php" class="slide-item"> Realizar Venda</a></li>
 						</ul>
 					</li>
 				</ul>
