@@ -1,13 +1,22 @@
+<?php
+require '../class/class.php';
+
+$rede = Lista::Rede();
+$item = Lista::Item();
+
+?>
+
 <!doctype html>
 <html lang="en" dir="ltr">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <!-- META DATA -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Painel de Administração">
-     <meta name="author" content="Everton Figueiredo">
+    <meta name="author" content="Everton Figueiredo">
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
     <!-- TITLE -->
@@ -30,6 +39,7 @@
     <!-- INTERNAL SELECT2 CSS -->
     <link href="../assets/plugins/select2/select2.min.css" rel="stylesheet" />
 </head>
+
 <body class="app sidebar-mini">
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
@@ -60,14 +70,17 @@
                             <div class="card-header">
                                 <h3 class="mb-0 card-title">Adicionar Item na Venda</h3>
                             </div>
-                            <form action="" method="get">
+                            <form action="../class/envio.php" method="POST">
+                               
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="form-group col-md-3">
                                             <label class="form-label">Item</label>
                                             <select name="beast" id="select-beast" class="form-control custom-select select2-show-search">
-                                                <option value="0">--Selecionar--</option>
-                                                <option value="1">Dress</option>
+                                            <option selected="true" disabled="disabled">--Selecionar--</option>
+                                                <?php foreach ($item as $i) { ?>
+                                                    <option value="<?php echo $i->id ?>"><?php echo $i->rede_social ?></option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-3">
@@ -80,9 +93,11 @@
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label class="form-label">Local da Venda</label>
-                                            <select name="beast" id="select-beast" class="form-control custom-select select2-show-search">
-                                                <option value="0">--Selecionar--</option>
-                                                <option value="1">Dress</option>
+                                            <select name="rede" id="select-beast" class="form-control custom-select select2-show-search">
+                                                <option selected="true" disabled="disabled">--Selecionar--</option>
+                                                <?php foreach ($rede as $r) { ?>
+                                                    <option value="<?php echo $r->id ?>"><?php echo $r->rede_social ?></option>
+                                                <?php } ?>
                                             </select>
                                         </div>
                                     </div>
@@ -123,14 +138,22 @@
                                                 <td>Relógio Y68</td>
                                                 <td>6</td>
                                                 <td>R$26,00</td>
-                                                <td>R$50,00</td>
+                                                <td>R$<span class="valor">50</span>,00</td>
+                                                <td>Facebook</td>
+                                            </tr>
+                                            <tr>
+                                                <td>01/01/2020</td>
+                                                <td>Relógio Y68</td>
+                                                <td>6</td>
+                                                <td>R$26,00</td>
+                                                <td>R$<span class="valor">50</span>,00</td>
                                                 <td>Facebook</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                                 <hr>
-                                <h3>Total da Venda: R$11,11</h3>
+                                <h3>Total da Venda: R$<span id="qtdtotal"></span>,00</h3>
                                 <a href="" class="btn btn-success">Finalizar Venda</a>
                                 <a href="" class="btn btn-warning">Gerar Orçamento</a>
                             </div>
@@ -191,5 +214,18 @@
     <script src="../assets/plugins/datatable/fileexport/buttons.html5.min.js"></script>
     <script src="../assets/plugins/datatable/fileexport/buttons.print.min.js"></script>
     <script src="../assets/plugins/datatable/fileexport/buttons.colVis.min.js"></script>
+    <script>
+        $(function() {
+
+            var valorCalculado = 0;
+
+            $(".valor").each(function() {
+                valorCalculado += parseInt($(this).text());
+            });
+            $("#qtdtotal").text(valorCalculado);
+
+        });
+    </script>
 </body>
+
 </html>

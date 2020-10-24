@@ -1,13 +1,23 @@
+<?php
+require '../class/class.php';
+
+$cor = Lista::Cor();
+$material = Lista::Material();
+$categoria = Lista::Categoria();
+$marca = Lista::Marca();
+?>
+
 <!doctype html>
 <html lang="en" dir="ltr">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <!-- META DATA -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Painel de Administração">
-     <meta name="author" content="Everton Figueiredo">
+    <meta name="author" content="Everton Figueiredo">
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
     <!-- TITLE -->
@@ -27,6 +37,7 @@
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
 </head>
+
 <body class="app sidebar-mini">
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
@@ -52,7 +63,8 @@
                     </div>
                     <!-- PAGE-HEADER END -->
                     <div class="row">
-                        <form action="">
+                        <form action="../class/envio.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="chave" value="cadastroitem">
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
@@ -65,13 +77,18 @@
                                                     <label class="form-label">Nome</label>
                                                     <input type="text" autocomplete="off" class="form-control" name="nome" placeholder="Nome do Produto">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group mt-3">
                                                     <label class="form-label">Marca</label>
-                                                    <input type="text" autocomplete="off" class="form-control" name="marca" placeholder="Marca do Produto" value="">
+                                                    <select name="marca" id="select-beast" class="form-control custom-select select2-show-search">
+                                                        <option selected="true" disabled="disabled">--Selecionar--</option>
+                                                        <?php foreach ($marca as $ma) { ?>
+                                                            <option value="<?php echo $ma->id ?>"><?php echo $ma->nome ?></option>
+                                                        <?php } ?>
+                                                    </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Quantidade</label>
-                                                    <input type="number" class="form-control" name="quantidade" placeholder="Quantidade">
+                                                    <input type="number" class="form-control" name="qtd" placeholder="Quantidade">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="form-label">Preço de Compra</label>
@@ -81,23 +98,29 @@
                                             <div class="col-md-6">
                                                 <div class="form-group mt-3">
                                                     <label class="form-label">Categoria</label>
-                                                    <select name="beast" id="select-beast" class="form-control custom-select select2-show-search">
-                                                        <option value="0">--Selecionar--</option>
-                                                        <option value="1">Dress</option>
+                                                    <select name="categoria" id="select-beast" class="form-control custom-select select2-show-search">
+                                                        <option selected="true" disabled="disabled">--Selecionar--</option>
+                                                        <?php foreach ($categoria as $ca) { ?>
+                                                            <option value="<?php echo $ca->id ?>"><?php echo $ca->nome ?></option>
+                                                        <?php } ?>
                                                     </select>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label class="form-label">Material</label>
-                                                    <select name="beast" id="select-beast" class="form-control custom-select select2-show-search">
-                                                        <option value="0">--Selecionar--</option>
-                                                        <option value="1">Dress</option>
+                                                    <select name="material" id="select-beast" class="form-control custom-select select2-show-search">
+                                                        <option selected="true" disabled="disabled">--Selecionar--</option>
+                                                        <?php foreach ($material as $m) { ?>
+                                                            <option value="<?php echo $m->id ?>"><?php echo $m->nome ?></option>
+                                                        <?php } ?>
                                                     </select>
                                                 </div>
                                                 <div class="form-group mt-3">
                                                     <label class="form-label">Cor</label>
-                                                    <select name="beast" id="select-beast" class="form-control custom-select select2-show-search">
-                                                        <option value="0">--Selecionar--</option>
-                                                        <option value="1">Dress</option>
+                                                    <select name="cor" id="select-beast" class="form-control custom-select select2-show-search">
+                                                        <option selected="true" disabled="disabled">--Selecionar--</option>
+                                                        <?php foreach ($cor as $c) { ?>
+                                                            <option value="<?php echo $c->id ?>"><?php echo $c->nome ?></option>
+                                                        <?php } ?>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
@@ -109,14 +132,14 @@
                                                 <div class="form-group mb-0">
                                                     <label class="form-label">Descrição do Item</label>
                                                     <br>
-                                                    <textarea class="form-control" name="example-textarea-input" rows="14" placeholder="Descrição do Item"></textarea>
+                                                    <textarea class="form-control" name="descricao" rows="14" placeholder="Descrição do Item"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="card shadow">
                                                     <label class="form-label">Imagem do Item</label>
                                                     <div class="card-body">
-                                                        <input type="file" class="dropify" data-height="300" />
+                                                        <input type="file" class="dropify" data-height="300" name="arquivo" />
                                                     </div>
                                                 </div>
                                             </div><!-- COL END -->
@@ -181,4 +204,5 @@
     <!-- CUSTOM JS -->
     <script src="../assets/js/custom.js"></script>
 </body>
+
 </html>

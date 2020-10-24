@@ -1,13 +1,30 @@
+<?php
+require '../class/class.php';
+
+if (isset($_GET, $_GET['id'])) {
+    $item = Lista::ItemUnico($_GET['id']);
+    $cor = Lista::Cor();
+    $material = Lista::Material();
+    $categoria = Lista::Categoria();
+    $marca = Lista::Marca();
+} else {
+    header('Location: index.php');
+}
+
+
+?>
+
 <!doctype html>
 <html lang="en" dir="ltr">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <!-- META DATA -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Painel de Administração">
-     <meta name="author" content="Everton Figueiredo">
+    <meta name="author" content="Everton Figueiredo">
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
     <!-- TITLE -->
@@ -21,6 +38,7 @@
     <!-- SIDEBAR CSS -->
     <link href="../assets/plugins/sidebar/sidebar.css" rel="stylesheet">
 </head>
+
 <body class="app sidebar-mini">
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
@@ -53,51 +71,51 @@
                             <div class="card-body">
                                 <div class="productdec text-center">
                                     <div class="bg-light-gray p-6 text-center">
-                                        <img alt="Product" src="" class="border p-2">
+                                        <img alt="Product" src="<?php echo $item->imagem ?>" class="border p-2">
                                     </div>
                                 </div>
                                 <div class="mt-4 mb-4">
-                                    <h3>Nome do Produto </h3>
+                                    <h3><?php echo $item->nome . ' - ' . $item->cor ?></h3>
                                     <h5 class="mb-3 mt-2">Descrição do Produto</h5>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                    <p><?php echo $item->descricao ?></p>
                                 </div>
                                 <div class="panel panel-primary">
                                     <div class="panel-body tabs-menu-body">
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="tab1">
-                                                <h4 class="mb-5 mt-3">General</h4>
+                                                <h4 class="mb-5 mt-3">Informações Gerais</h4>
                                                 <ul class="list-unstyled mb-0">
                                                     <li class="row">
-                                                        <div class="col-sm-3 text-muted">Nome</div>
-                                                        <div class="col-sm-3">CASAMOTION</div>
+                                                        <div class="col-sm-3 text-muted">Nome:</div>
+                                                        <div class="col-sm-3"><?php echo $item->nome ?></div>
                                                     </li>
                                                     <li class=" row">
-                                                        <div class="col-sm-3 text-muted">Marca</div>
-                                                        <div class="col-sm-3">AHLF016</div>
+                                                        <div class="col-sm-3 text-muted">Marca:</div>
+                                                        <div class="col-sm-3"><?php echo $item->marca ?></div>
                                                     </li>
                                                     <li class="p-b-20 row">
                                                         <div class="col-sm-3 text-muted">Quantidade</div>
-                                                        <div class="col-sm-3">casamotion</div>
+                                                        <div class="col-sm-3"><?php echo $item->qtd ?></div>
                                                     </li>
                                                     <li class="p-b-20 row">
                                                         <div class="col-sm-3 text-muted">Categoria</div>
-                                                        <div class="col-sm-3">Table, Floor</div>
+                                                        <div class="col-sm-3"><?php echo $item->categoria ?></div>
                                                     </li>
                                                     <li class="p-b-20 row">
                                                         <div class="col-sm-3 text-muted">Material</div>
-                                                        <div class="col-sm-3">Wood</div>
+                                                        <div class="col-sm-3"><?php echo $item->material ?></div>
                                                     </li>
                                                     <li class="p-b-20 row">
                                                         <div class="col-sm-3 text-muted">Cor</div>
-                                                        <div class="col-sm-3">Wood</div>
+                                                        <div class="col-sm-3"><?php echo $item->cor ?></div>
                                                     </li>
                                                     <li class="p-b-20 row">
                                                         <div class="col-sm-3 text-muted">Preço de Compra</div>
-                                                        <div class="col-sm-3">Wood</div>
+                                                        <div class="col-sm-3">R$ <?php echo $item->preco_c ?></div>
                                                     </li>
                                                     <li class="p-b-20 row">
                                                         <div class="col-sm-3 text-muted">Preço de Venda</div>
-                                                        <div class="col-sm-3">Wood</div>
+                                                        <div class="col-sm-3">R$ <?php echo $item->preco_v ?></div>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -117,21 +135,32 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label class="form-label">Nome</label>
-                                        <input type="text" class="form-control" name="nome" placeholder="Nome do Produto">
+                                        <input type="text" class="form-control" name="nome" placeholder="Nome do Produto" value="<?php echo $item->nome ?>">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Marca</label>
-                                        <input type="text" class="form-control" name="marca" placeholder="Marca do Produto">
+                                        <select name="marca" id="select-beast" class="form-control custom-select select2-show-search">
+                                            <option selected="true" disabled="disabled">--Selecionar--</option>
+                                            <?php foreach ($marca as $ma) { ?>
+                                                <option <?php if ($ma->id == $item->id_marca) {
+                                                            echo 'selected';
+                                                        } ?> value="<?php echo $ma->id ?>"><?php echo $ma->nome ?></option>
+                                            <?php } ?>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Quantidade</label>
-                                        <input type="number" class="form-control" name="quantidade" placeholder="Quantidade">
+                                        <input type="number" class="form-control" name="qtd" placeholder="Quantidade" value="<?php echo $item->qtd ?>">
                                     </div>
                                     <div class="form-group mt-3">
                                         <label class="form-label">Categoria</label>
-                                        <select name="beast" id="select-beast" class="form-control custom-select select2-show-search">
+                                        <select name="categoria" id="select-beast" class="form-control custom-select select2-show-search">
                                             <option value="0">--Selecionar--</option>
-                                            <option value="1">Dress</option>
+                                            <?php foreach ($categoria as $ca) { ?>
+                                                <option <?php if ($ca->id == $item->id_marca) {
+                                                            echo 'selected';
+                                                        } ?> value="<?php echo $ca->id ?>"><?php echo $ca->nome ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                     <div class="form-group mt-3">
@@ -238,4 +267,5 @@
     <!-- CUSTOM JS -->
     <script src="../assets/js/custom.js"></script>
 </body>
+
 </html>

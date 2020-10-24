@@ -1,9 +1,11 @@
+<?php
+require '../class/class.php';
+
+$item = Lista::Item();
+?>
+
 <!doctype html>
 <html lang="en" dir="ltr">
-
-
-
-
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 
 <head>
@@ -13,8 +15,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Painel de Administração">
-     <meta name="author" content="Everton Figueiredo">
- 
+    <meta name="author" content="Everton Figueiredo">
+
 
     <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
@@ -91,16 +93,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Relógio Y68</td>
-                                                <td>6</td>
-                                                <td>R$26,00</td>
-                                                <td>R$50,00</td>
-                                                <td>01/01/2020</td>
-                                                <td>
-                                                    <a class="btn btn-primary" href="detalhesItens.php">Detalhes</a>
-                                                </td>
-                                            </tr>
+                                            <?php foreach ($item as $i) { ?>
+                                                <tr>
+                                                    <td><?php echo $i->nome.' - '.$i->cor ?></td>
+                                                    <td><?php echo $i->qtd ?></td>
+                                                    <td>R$ <?php echo $i->preco_c ?></td>
+                                                    <td>R$ <?php echo $i->preco_v ?></td>
+                                                    <td><?php echo Converter::Data($i->data) ?></td>
+                                                    <td>
+                                                        <a class="btn btn-primary" href="detalhesItens.php?id=<?php echo $i->id ?>">Detalhes</a>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -118,48 +122,48 @@
     <!-- FOOTER END -->
     </div>
 
-    	<!-- JQUERY JS -->
-	<script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <!-- JQUERY JS -->
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
 
-<!-- BOOTSTRAP JS -->
-<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
 
-<!-- SPARKLINE JS-->
-<script src="../assets/js/jquery.sparkline.min.js"></script>
+    <!-- SPARKLINE JS-->
+    <script src="../assets/js/jquery.sparkline.min.js"></script>
 
-<!-- CHART-CIRCLE JS-->
-<script src="../assets/js/circle-progress.min.js"></script>
+    <!-- CHART-CIRCLE JS-->
+    <script src="../assets/js/circle-progress.min.js"></script>
 
-<!-- RATING STARJS -->
-<script src="../assets/plugins/rating/jquery.rating-stars.js"></script>
+    <!-- RATING STARJS -->
+    <script src="../assets/plugins/rating/jquery.rating-stars.js"></script>
 
-<!-- EVA-ICONS JS -->
-<script src="../assets/iconfonts/eva.min.js"></script>
+    <!-- EVA-ICONS JS -->
+    <script src="../assets/iconfonts/eva.min.js"></script>
 
-<!-- INPUT MASK JS-->
-<script src="../assets/plugins/input-mask/jquery.mask.min.js"></script>
+    <!-- INPUT MASK JS-->
+    <script src="../assets/plugins/input-mask/jquery.mask.min.js"></script>
 
-<!-- SIDE-MENU JS-->
-<script src="../assets/plugins/sidemenu/sidemenu.js"></script>
+    <!-- SIDE-MENU JS-->
+    <script src="../assets/plugins/sidemenu/sidemenu.js"></script>
 
-<!-- CUSTOM SCROLLBAR JS-->
-<script src="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- CUSTOM SCROLLBAR JS-->
+    <script src="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
-<!-- INTERNAL  CLIPBOARD JS -->
-<script src="../assets/plugins/clipboard/clipboard.min.js"></script>
-<script src="../assets/plugins/clipboard/clipboard.js"></script>
+    <!-- INTERNAL  CLIPBOARD JS -->
+    <script src="../assets/plugins/clipboard/clipboard.min.js"></script>
+    <script src="../assets/plugins/clipboard/clipboard.js"></script>
 
-<!-- INTERNALPRISM JS -->
-<script src="../assets/plugins/prism/prism.js"></script>
-<!-- SIDEBAR JS -->
-<script src="../assets/plugins/sidebar/sidebar.js"></script>
-<!-- CUSTOM JS -->
-<script src="../assets/js/custom.js"></script>
+    <!-- INTERNALPRISM JS -->
+    <script src="../assets/plugins/prism/prism.js"></script>
+    <!-- SIDEBAR JS -->
+    <script src="../assets/plugins/sidebar/sidebar.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="../assets/js/custom.js"></script>
 
-<!-- Swicther JS -->
-<script src="../assets/switcher/js/switcher.js"></script>
+    <!-- Swicther JS -->
+    <script src="../assets/switcher/js/switcher.js"></script>
 
 
 
